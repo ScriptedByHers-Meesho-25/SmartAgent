@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "langchain-hindi-bot"
+version = "0.1.0"
+description = "A voice-first LangChain-based AI shopping agent for Meesho"
+authors = ["satyapriyanidhi@gmail.com"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+# Web framework
+fastapi = "^0.110.0"
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+
+# LangChain + LLMs
+langchain = "^0.2.0"
+openai = "^1.30.0"
+tiktoken = "^0.7.0"
+
+# Voice
+whisper = {git = "https://github.com/openai/whisper.git"}
+elevenlabs = "^1.2.0"
+pydub = "^0.25.1"
+
+# NLP
+transformers = "^4.41.0"
+sentence-transformers = "^2.6.1"
+nltk = "^3.8.1"
+
+# Translation
+googletrans = "^4.0.0-rc1"
+
+# Data
+pandas = "^2.2.2"
+numpy = "^1.26.4"
+
+# Database
+motor = "^3.3.2"            # Async MongoDB
+sqlalchemy = "^2.0.30"
+asyncpg = "^0.29.0"
+
+# Utils
+python-dotenv = "^1.0.1"
+httpx = "^0.27.0"
+pydantic = "^2.7.1"
+requests = "^2.32.3"
+
+# Testing
+pytest = "^8.2.2"
+pytest-asyncio = "^0.23.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
